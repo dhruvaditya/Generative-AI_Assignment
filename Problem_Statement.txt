@@ -1,0 +1,50 @@
+Building a PDF question-and-answer application with LangChain, Google PaLM 2, and Chroma Vector Database.
+
+
+Overview: In this assignment, you will create a Question and Answer (Q&A) application that utilizes LangChain, Google PaLM 2, and the Chroma Vector Database to extract information from private PDF documents. The assignment is designed to deepen your understanding of these technologies while fostering hands-on experiences.
+
+ 
+
+If you don't have a PaLM API key, you can get one by following this link:  https://makersuite.google.com/app/apikey (Links to an external site.)
+
+ 
+
+Task 1: Data Preparation and PDF Upload (2 points)
+
+1.1. Develop an API for uploading PDF documents to the application. (With FastAPI)
+
+1.2. API will take pdf_path and pdf name as input and should return a success message if the document is successfully converted to embedding and saved to Chroma Db.
+
+1.3. Segment the text into smaller chunks or sections for improved processing.
+
+Task 2: Embedding and Chroma Vector Database (3 points)
+
+2.1. Create embeddings for the segmented text. 
+
+2.2. Store the embeddings in a Chroma Vector Database for efficient retrieval.
+
+Task 3: Building the Q&A BackEnd (4 points)
+
+3.1. Implement an API using FastAPI that integrates LangChain and Google PaLM 2 for the Q&A task, based on the given PDF.
+
+3.2. API should take the user's question and pdf name as input and should return the answer to the user's question.
+
+3.3. Implement a search functionality that queries the Chroma Vector Database using user questions and retrieves the relevant segments of the PDF documents based on the search results.
+
+3.4. Develop a function that takes relevant segments and a user question as input and returns the accurate answer using PaLM2.
+
+3.5. Test your application with a set of questions from PDF documents, to verify its functionality.
+
+ 
+
+Submission Instructions:
+
+You are required to submit your work on GitHub.
+Create a repository on GitHub where you will upload your code, documentation, and any additional resources used.
+Provide the link to your GitHub repository in your assignment submission.
+ 
+
+Evaluation Criteria:
+
+Points will be awarded based on the successful completion of each task.
+The total points available for this assignment are 10.
