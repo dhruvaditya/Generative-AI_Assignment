@@ -66,23 +66,19 @@ async def create_file(pdf_name=str,
     pdf_store = "Docs"
     os.makedirs(pdf_store, exist_ok=True)
     print("You have successfully created pdf directory")
-    #Three empty lists are created to store some necessary data
-    uploaded_documents = []
-    extracted_texts = []
+    #empty list created to store embeddings in vector database
     embeddings = []
     #traversing file from multiple files
     for file in files:
         #testing wheter the uploaded document is pdf or not
         if file.content_type not in ("application/pdf", "application/octet-stream"):
             return {"error": "Invalid file format. Please upload only PDFs."}
-        file_name = file.filename
-        # file_path=f"{pdf_store}/file_name" 
-        
         #storing name in a varible
-        # file_name = file.filename
+        file_name = file.filename
+
         # Construct the file path to save the uploaded file
         file_path = os.path.join(pdf_store, file_name)
-        # file_path=f"{pdf_store}/file_name"
+
         try:
             # Read PDF using PDF Reader
             documents = [file.read().decode()]
@@ -164,4 +160,4 @@ def embeddingfun(texts):
 #This function is made to store the collective text to global_text to pass in a function
 def text_catcher(texts):
     global_text=texts
-    return texts
+    return global_text
