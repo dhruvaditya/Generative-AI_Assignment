@@ -10,3 +10,4 @@ Now User can ask question from the pdf . once user added any question by post me
 processed for similarity search and the one which is more similar will be returned as an output. 
 This is the main idea behind this project.
 Here is the System architecture:
+![20240217_003514](https://github.com/dhruvaditya/Generative-AI_Assignment/assets/89244720/2aa2ed8c-d1f4-4cf9-8950-1b4f92cf61fd)
